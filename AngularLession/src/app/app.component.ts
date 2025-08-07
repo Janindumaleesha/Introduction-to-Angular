@@ -10,5 +10,9 @@ import { DashboardComponent } from './dashboard/dashboard.component';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'AngularLession';
+  title: string = 'AngularLession';
+  imageUrl: string = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6pXQTat5xa_jxh8xM2p-AKDEXFPYgRqOI2Q&s';
+  isDisabled: boolean = true;
+  ariaLableText: string = 'You can click this button.';
+  colSpan = 2;
 }

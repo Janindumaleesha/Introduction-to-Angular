@@ -1,3 +1,45 @@
-<h1>Janindu Maleesha</h1>
-<app-login></app-login>
-<app-dashboard></app-dashboard>
+<h1>{{ title }}</h1>
+<!-- <app-login></app-login>
+<app-dashboard></app-dashboard> -->
+<!-- <h2>{{2+2}}</h2> -->
+
+<!-- Property binding -->
+<!-- <img [src]="imageUrl" />
+
+<br/> -->
+
+<!-- String interpolation -->
+<!-- <img src="{{imageUrl}}" /> -->
+
+<br/>
+
+<button [disabled]="isDisabled">Click Me</button>
+
+<button disabled="{{isDisabled}}">Click Me</button>
+
+<hr/>
+
+<button [attr.aria-lable]="ariaLableText" >Attribute Binding</button>
+<button>Without Area Lable</button>
+
+<hr/>
+
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Age</th>
+    </tr>
+    <tr>
+        <td>Janindu</td>
+        <td>26</td>
+    </tr>
+    <tr>
+        <td>Diluni</td>
+        <td>30</td>
+    </tr>
+    <tr>
+        <!-- <td colspan="2">Sum of the age: 56</td> -->
+        <!-- <td [colSpan]="colSpan">Sum of the age: 56</td> -->
+        <td [attr.colspan]="colSpan">Sum of the age: 56</td>
+    </tr>
+</table>
