@@ -15,4 +15,9 @@ export class AppComponent {
   isDisabled: boolean = true;
   ariaLableText: string = 'You can click this button.';
   colSpan = 2;
+  phara: string = "I'm Janindu Maleesha Ariyasinghe.";
+  color: string = 'red';
+  isActive: boolean = true;
+  text: string = "Lorem Ipsum is simply dummy text of the printing and typesetting industry.";
+  name: string = 'Janindu'
 }

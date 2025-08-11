@@ -43,3 +43,30 @@
         <td [attr.colspan]="colSpan">Sum of the age: 56</td>
     </tr>
 </table>
+
+<hr/>
+
+<!-- Data binding -->
+
+<!-- Style binding -->
+
+<h1 [style.color]="color" [style.backgroundColor]="'yellow'">{{phara}}</h1>
+
+<hr/>
+
+<!-- Class binding -->
+
+<h3 
+[class.active]="isActive"
+[class.nonactive]="!isActive"
+>{{phara}}</h3>
+
+<p 
+[style.color]="isActive ? 'pink' : 'green'"
+[style.backgroundColor]="isActive ? 'green' : 'pink'"
+>{{text}}</p>
+
+<h5 
+[class.active]="name == 'Janindu'"
+[class.nonactive]="name != 'Janindu'"
+>{{text}}</h5>
