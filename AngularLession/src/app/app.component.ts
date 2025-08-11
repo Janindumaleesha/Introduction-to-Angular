@@ -2,10 +2,11 @@ import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { LoginComponent } from './login/login.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, LoginComponent, DashboardComponent],
+  imports: [RouterOutlet, LoginComponent, DashboardComponent, FormsModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
@@ -20,4 +21,27 @@ export class AppComponent {
   isActive: boolean = true;
   text: string = "Lorem Ipsum is simply dummy text of the printing and typesetting industry.";
   name: string = 'Janindu'
+
+  clickButton() {
+    console.log("Button Click!!!")
+  }
+
+  typeInput(event: KeyboardEvent) {
+    if (event.key == 'Enter'){
+      console.log("Enter clicked.")
+    }
+  }
+
+  keydoenClicked() {
+    console.log("Enter clicked.")
+  }
+
+  inputValue: string = ''
+
+  showData(input : HTMLInputElement) {
+    this.inputValue = input.value
+    console.log(input.value)
+  }
+
+  twoWayValue: string = ''
 }

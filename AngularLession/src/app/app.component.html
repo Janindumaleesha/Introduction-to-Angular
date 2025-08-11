@@ -50,13 +50,13 @@
 
 <!-- Style binding -->
 
-<h1 [style.color]="color" [style.backgroundColor]="'yellow'">{{phara}}</h1>
+<!-- <h1 [style.color]="color" [style.backgroundColor]="'yellow'">{{phara}}</h1>
 
-<hr/>
+<hr/> -->
 
 <!-- Class binding -->
 
-<h3 
+<!-- <h3 
 [class.active]="isActive"
 [class.nonactive]="!isActive"
 >{{phara}}</h3>
@@ -69,4 +69,40 @@
 <h5 
 [class.active]="name == 'Janindu'"
 [class.nonactive]="name != 'Janindu'"
->{{text}}</h5>
+>{{text}}</h5> -->
+
+
+<!-- Data Binding -->
+
+<button (click)="clickButton()" >Click Me</button>
+
+<br/>
+<br/>
+
+<input type="text" (keyup)="typeInput($event)" />
+
+<br/>
+<br/>
+
+<input type="text" (keydown.enter)="keydoenClicked()" />
+
+<br/>
+<br/>
+
+<!-- Data Binding Template Variable -->
+
+<input type="text" (keyup)="showData(inputRef)" #inputRef id="name" />
+
+<br/>
+
+<h3>{{inputValue}}</h3>
+
+<br/>
+<br/>
+
+<!-- Two Way Data Binding -->
+
+<input type="text" [(ngModel)]="twoWayValue" />
+
+<h3>{{twoWayValue}}</h3>
+
