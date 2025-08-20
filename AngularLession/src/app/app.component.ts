@@ -3,15 +3,21 @@ import { RouterOutlet } from '@angular/router';
 import { LoginComponent } from './login/login.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { FormsModule } from '@angular/forms';
+import { NgIf } from '@angular/common';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, LoginComponent, DashboardComponent, FormsModule],
+  imports: [
+    RouterOutlet, 
+    LoginComponent, 
+    DashboardComponent, 
+    FormsModule, 
+    NgIf],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title: string = 'AngularLession';
+  title: string = 'Angular Lession';
   imageUrl: string = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6pXQTat5xa_jxh8xM2p-AKDEXFPYgRqOI2Q&s';
   isDisabled: boolean = true;
   ariaLableText: string = 'You can click this button.';
@@ -44,4 +50,9 @@ export class AppComponent {
   }
 
   twoWayValue: string = ''
+
+  topic: string = 'Angular Lession'
+  isLogging: boolean = true
+  status: string = 'success'
+  marks: number = 50
 }

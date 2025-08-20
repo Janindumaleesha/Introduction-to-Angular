@@ -1,4 +1,4 @@
-<h1>{{ title }}</h1>
+<!-- <h1>{{ title }}</h1> -->
 <!-- <app-login></app-login>
 <app-dashboard></app-dashboard> -->
 <!-- <h2>{{2+2}}</h2> -->
@@ -11,7 +11,7 @@
 <!-- String interpolation -->
 <!-- <img src="{{imageUrl}}" /> -->
 
-<br/>
+<!-- <br/>
 
 <button [disabled]="isDisabled">Click Me</button>
 
@@ -38,13 +38,13 @@
         <td>30</td>
     </tr>
     <tr>
-        <!-- <td colspan="2">Sum of the age: 56</td> -->
+        <td colspan="2">Sum of the age: 56</td> -->
         <!-- <td [colSpan]="colSpan">Sum of the age: 56</td> -->
-        <td [attr.colspan]="colSpan">Sum of the age: 56</td>
+        <!-- <td [attr.colspan]="colSpan">Sum of the age: 56</td>
     </tr>
 </table>
 
-<hr/>
+<hr/> --> 
 
 <!-- Data binding -->
 
@@ -74,7 +74,7 @@
 
 <!-- Data Binding -->
 
-<button (click)="clickButton()" >Click Me</button>
+<!-- <button (click)="clickButton()" >Click Me</button>
 
 <br/>
 <br/>
@@ -87,22 +87,75 @@
 <input type="text" (keydown.enter)="keydoenClicked()" />
 
 <br/>
-<br/>
+<br/> -->
 
 <!-- Data Binding Template Variable -->
 
-<input type="text" (keyup)="showData(inputRef)" #inputRef id="name" />
+<!-- <input type="text" (keyup)="showData(inputRef)" #inputRef id="name" />
 
 <br/>
 
 <h3>{{inputValue}}</h3>
 
 <br/>
-<br/>
+<br/> -->
 
 <!-- Two Way Data Binding -->
 
-<input type="text" [(ngModel)]="twoWayValue" />
+<!-- <input type="text" [(ngModel)]="twoWayValue" />
 
-<h3>{{twoWayValue}}</h3>
+<h3>{{twoWayValue}}</h3> -->
+
+<h1>{{topic}}</h1>
+
+<!-- <p *ngIf="isLogging">This page topic name is {{topic}}</p>
+
+<p *ngIf="!isLogging">Please Logging!</p> -->
+
+<!-- @if (isLogging) {
+    <p>This page topic name is {{topic}}</p>
+}
+
+@if (!isLogging) {
+    <p>Please Logging!</p>
+} -->
+
+<!-- <p *ngIf="isLogging; else info">This page topic name is {{topic}}</p>
+
+<ng-template #info>
+    <p>Please Logging!</p>
+</ng-template> -->
+
+<!-- @if (isLogging) {
+    <p>This page topic name is {{topic}}!</p>
+} 
+@else {
+    <p>Please Logging!</p>
+} -->
+
+<!-- <p *ngIf="status === 'success'; else failed" >Success</p>
+
+<ng-template #failed>
+    <p>Failed</p>
+</ng-template> -->
+
+<!-- @if (status === 'success') {
+    <p>Success</p>
+}
+@else {
+    <p>Failed</p>
+} -->
+
+<!-- <h3 *ngIf="marks > 50 ; else info">Marks greater than 50...</h3>
+
+<ng-template #info>
+    <h3>Marks less that or equel...</h3>
+</ng-template> -->
+
+@if (marks > 50) {
+    <h3>Marks greater than 50...</h3>
+}
+@else {
+    <h3>Marks less that or equel...</h3>
+}
 
