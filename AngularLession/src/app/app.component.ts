@@ -55,4 +55,13 @@ export class AppComponent {
   isLogging: boolean = true
   status: string = 'success'
   marks: number = 50
+
+  isContentVisible: boolean = true
+
+  toggleContent() {
+    this.isContentVisible = !this.isContentVisible
+  }
+
+  isSignIn: boolean = false
+  role: string = 'admin' //admin, editor, user
 }
