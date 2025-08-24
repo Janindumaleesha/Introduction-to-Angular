@@ -218,9 +218,196 @@
     <h3 *ngIf="role === 'admin'">Admin's Setting...</h3>
 </div> -->
 
-@if (isSignIn) {
+<!-- @if (isSignIn) {
     <h2>Welcome Admin!!!</h2>
     @if (role === 'admin') {
         <h3>Admin's Setting...</h3>
     }
+} -->
+
+<!-- <h3>{{students}}</h3>
+
+<h4>{{students[0]}}</h4>
+<h4>{{students[1]}}</h4>
+<h4>{{students[2]}}</h4> -->
+
+<!-- <h3 *ngFor="let student of students">{{student}}</h3> -->
+
+<!-- @for (student of students; track student) {
+    <h3>{{student}}</h3>
+} -->
+
+<!-- <ul>
+    <li *ngFor="let student of students">{{student}}</li>
+</ul>
+
+<ol>
+    <li *ngFor="let student of students">{{student}}</li>
+</ol> -->
+
+<!-- <ul>
+    @for (student of students; track student) {
+        <li>{{student}}</li>
+    }
+</ul>
+
+<ol>
+    @for (student of students; track student) {
+        <li>{{student}}</li>
+    }
+</ol> -->
+
+<!-- <ul>
+    <li *ngFor="let user of users">{{user.id}} | {{user.name}} | {{user.email}}</li>
+</ul> -->
+
+<!-- <button (click)="addNewUser()">Add New User</button> -->
+
+<!-- <h4 *ngIf="users.length == 0">There are no any users.</h4> -->
+
+<!-- @if (users.length == 0) {
+    <h4>There are no any users.</h4>      
+}
+
+<ul>
+    <li *ngFor="let user of users">{{user.id}} | {{user.name}} | {{user.email}}</li>
+</ul> -->
+
+<!-- <ul>
+    @for (user of users; track user.id) {
+        <li>{{user.id}} | {{user.name}} | {{user.email}} | <button (click)="deleteUser(user)">Delete</button></li>
+    }
+    @empty {
+        <h4>There are no any users.</h4>
+    }
+</ul> -->
+
+<!-- <ul>
+    @for (user of users; track user) {
+        <li>{{user.id}} | {{user.name}} | {{user.email}} | <button (click)="deleteUser(user)">Delete</button></li>
+    }
+    @empty {
+        <h4>There are no any users.</h4>
+    }
+</ul> -->
+
+<!-- <ul>
+    @for (user of users; track $index) {
+        <li>{{user.id}} | {{user.name}} | {{user.email}} | <button (click)="deleteUser(user)">Delete</button></li>
+    }
+    @empty {
+        <h4>There are no any users.</h4>
+    }
+</ul> -->
+
+<!-- @if (users.length == 0) {
+    <h4>There are no any users.</h4>      
+}
+
+<ul>
+    <li *ngFor="let user of users; let i = index">{{i}} -> {{user.id}} | {{user.name}} | {{user.email}} | <button (click)="deleteUser(i)">Delete</button></li>
+</ul> -->
+
+<!-- <ul>
+    @for (user of users; track $index; let i = $index) {
+        <li>{{i}} - {{user.id}} | {{user.name}} | {{user.email}} | <button (click)="deleteUser(i)">Delete</button></li>
+    }
+    @empty {
+        <h4>There are no any users.</h4>
+    }
+</ul> -->
+
+<!-- <h2>User Count: {{users.length}}</h2>
+
+@if (users.length == 0) {
+    <h4>There are no any users.</h4>      
+}
+
+<ul>
+    <li *ngFor="let user of users; let i = index; let count = count">
+        {{count}} -> {{i}} -> {{user.id}} | {{user.name}} | {{user.email}} | 
+        <button (click)="deleteUser(i)">Delete</button>
+    </li>
+</ul> -->
+
+<!-- <h2>User Count: {{users.length}}</h2>
+
+@if (users.length == 0) {
+    <h4>There are no any users.</h4>      
+}
+
+<ul>
+    <li *ngFor="let user of users; let i = index; let first = first">
+        First: {{first}} -> {{i}} -> {{user.id}} | {{user.name}} | {{user.email}} | 
+        <button (click)="deleteUser(i)">Delete</button>
+    </li>
+</ul> -->
+
+
+<!-- <h2>User Count: {{users.length}}</h2>
+
+@if (users.length == 0) {
+    <h4>There are no any users.</h4>      
+}
+
+<ul>
+    <li *ngFor="let user of users; let i = index; let last = last">
+        Last: {{last}} -> {{i}} -> {{user.id}} | {{user.name}} | {{user.email}} | 
+        <button (click)="deleteUser(i)">Delete</button>
+    </li>
+</ul> -->
+
+<!-- <h2>User Count: {{users.length}}</h2>
+
+@if (users.length == 0) {
+    <h4>There are no any users.</h4>      
+}
+
+<ul>
+    <li *ngFor="let user of users; let i = index; let odd = odd">
+        ODD Number: {{odd}} -> {{i}} -> {{user.id}} | {{user.name}} | {{user.email}} | 
+        <button (click)="deleteUser(i)">Delete</button>
+    </li>
+</ul> -->
+
+<!-- <h2>User Count: {{users.length}}</h2>
+
+@if (users.length == 0) {
+    <h4>There are no any users.</h4>      
+}
+
+<ul>
+    <li *ngFor="let user of users; let i = index; let even = even">
+        EVEN Number: {{even}} -> {{i}} -> {{user.id}} | {{user.name}} | {{user.email}} | 
+        <button (click)="deleteUser(i)">Delete</button>
+    </li>
+</ul> -->
+
+<!-- <h2>User Count: {{users.length}}</h2>
+
+<ul>
+    @for (user of users; track $index; let i = $index; let count = $count) {
+        <li>User count: {{count}} - {{i}} - {{user.id}} | {{user.name}} | {{user.email}} | <button (click)="deleteUser(i)">Delete</button></li>
+    }
+    @empty {
+        <h4>There are no any users.</h4>
+    }
+</ul> -->
+
+<!-- <h2 *ngFor="let item of neastedItems">{{item.category}}</h2> -->
+
+<!-- <div *ngFor="let item of neastedItems">
+    <h2>{{item.category}}</h2>
+    <ul>
+        <li *ngFor="let name of item.items">{{name}}</li>
+    </ul>
+</div> -->
+
+@for (item of neastedItems; track item) {
+    <h2>{{item.category}}</h2>
+    <ul>
+        @for (name of item.items; track name) {
+            <li>{{name}}</li>
+        }
+    </ul>
 }

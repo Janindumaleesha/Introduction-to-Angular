@@ -3,7 +3,7 @@ import { RouterOutlet } from '@angular/router';
 import { LoginComponent } from './login/login.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { FormsModule } from '@angular/forms';
-import { NgIf } from '@angular/common';
+import { NgFor, NgIf } from '@angular/common';
 
 @Component({
   selector: 'app-root',
@@ -12,7 +12,9 @@ import { NgIf } from '@angular/common';
     LoginComponent, 
     DashboardComponent, 
     FormsModule, 
-    NgIf],
+    NgIf,
+    NgFor
+  ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
@@ -64,4 +66,44 @@ export class AppComponent {
 
   isSignIn: boolean = false
   role: string = 'admin' //admin, editor, user
+
+  students: string[] = ['Janindu', 'Diluni', 'Daham']
+
+  users: User[] = [
+    // {id: 1, name: 'User1', email: 'user1@email.com'},
+    // {id: 2, name: 'User2', email: 'user2@email.com'},
+    // {id: 3, name: 'User3', email: 'user3@email.com'}
+  ]
+
+  addNewUser() {
+    let length = this.users.length
+    let user: User = { id: length + 1, name: `User${length + 1}`, email: `user${length + 1}@gmail.com` }
+    this.users.push(user)
+  }
+
+  // deleteUser(user: User) {
+  //   // console.log(user)
+
+  //   let indexOfTheUser = this.users.indexOf(user)
+  //   // console.log(indexOfTheUser)
+
+  //   this.users.splice(indexOfTheUser, 1)
+  // }
+
+  deleteUser(indexOfTheUser: number) {
+    // console.log(indexOfTheUser)
+    this.users.splice(indexOfTheUser, 1)
+  }
+
+  neastedItems: { category: string, items: string[] }[] = [
+    { category: 'Fruits', items : ['Apple', 'Banana', 'Orange'] },
+    { category: 'Animals', items : ['Lion', 'Dog', 'Cat'] }
+  ]
+  
 }
+
+interface User {
+    id: number,
+    name: string,
+    email: string
+  }
